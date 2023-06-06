@@ -15,7 +15,6 @@
  */
 package com.acme.jee;
 
-import javax.annotation.PostConstruct;
 import javax.ejb.*;
 
 /**
