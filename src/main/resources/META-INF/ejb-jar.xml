@@ -6,8 +6,9 @@
          version="3.0">
     <enterprise-beans>
         <session>
-            <ejb-name>Hello</ejb-name>
-            <home>com.acme.jee.LocalHomeComponent</home>
+            <ejb-name>helloBean</ejb-name>
+            <local>com.acme.jee.HelloComponentInterface</local>
+            <local-home>com.acme.jee.LocalHelloHomeInterface</local-home>
             <ejb-class>com.acme.jee.HelloBean</ejb-class>
             <session-type>Stateless</session-type>
             <transaction-type>Container</transaction-type>
