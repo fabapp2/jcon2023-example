@@ -15,24 +15,11 @@
  */
 package com.acme.jee;
 
-import javax.ejb.*;
-
 /**
  * @author Fabian Krüger
  */
-//@Startup
-//@Singleton
-public class ScheduledBeanImpl {
-    public void initialize(TimerService timerService) {
-        System.out.println("INITIALIZED....");
-        timerService.createTimer(0, 30000, "MyScheduledTimer");
-    }
-    //@Schedules(@Schedule(month = "*", dayOfMonth = "*", second = "*/3", minute = "*", hour = "*"))
-    public void printHello(Timer timer) {
-        System.out.println("Hello...");
-    }
-
-    public void timeout(Timer timer) {
-        System.out.println("Hello...");
+public class GoodByeBean {
+    public String sayGoodBye() {
+        return "Good bye";
     }
 }
