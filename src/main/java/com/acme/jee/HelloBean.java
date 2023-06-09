@@ -1,43 +1,25 @@
+/*
+ * Copyright 2021 - 2022 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.acme.jee;
 
-import javax.ejb.*;
+import javax.ejb.Stateless;
 
-public class HelloBean implements SessionBean {
-
-    /* ----------------------------------------
-    * Begin business methods. The following methods
-    * are called by the client code.
-    * -------------------------------------- */
-
-    public String sayHello(String myName) throws EJBException {
-        return ("Hello " + myName);
-    }
-
-    /* ----------------------------------------
-    * Begin private methods. The following methods
-    * are used internally
-    * -------------------------------------- */
-
-    /* ------------------------------------------------------
-    * Begin EJB-required methods. The following methods are called
-    * by the container, and never called by client code
-    * ------------------------------------------------------- */
-
-    public void ejbCreate() throws CreateException {
-        // when bean is created
-    }
-
-    public void setSessionContext(SessionContext ctx) {
-    }
-
-// Life Cycle Methods
-
-    public void ejbActivate() {
-    }
-
-    public void ejbPassivate() {
-    }
-
-    public void ejbRemove() {
+@Stateless
+public class HelloBean {
+    public String getText() {
+        return "Gude!";
     }
 }
