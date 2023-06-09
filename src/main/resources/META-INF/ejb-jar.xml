@@ -10,35 +10,5 @@
             <ejb-class>com.acme.jee.HelloBean</ejb-class>
             <session-type>Stateless</session-type>
         </session>
-<!--        <session>-->
-<!--            <ejb-name>helloBean</ejb-name>-->
-<!--            <local-home>com.acme.jee.LocalHelloHomeInterface</local-home>-->
-<!--            <local>com.acme.jee.HelloComponentInterface</local>-->
-<!--            <ejb-class>com.acme.jee.HelloBean</ejb-class>-->
-<!--            <session-type>Stateless</session-type>-->
-<!--            <transaction-type>Container</transaction-type>-->
-<!--        </session>-->
-<!--        <session>-->
-<!--            <ejb-name>ScheduledBeanImpl</ejb-name>-->
-<!--            <ejb-class>com.acme.jee.ScheduledBeanImpl</ejb-class>-->
-<!--            <session-type>Singleton</session-type>-->
-<!--            <timer>-->
-<!--                <schedule>-->
-<!--                    <second>*/3</second>-->
-<!--                    <minute>*</minute>-->
-<!--                    <hour>*</hour>-->
-<!--&lt;!&ndash;                    <day-of-month>*</day-of-month>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <month>*</month>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <day-of-week>*</day-of-week>&ndash;&gt;-->
-<!--                </schedule>-->
-<!--                <timeout-method>-->
-<!--                    <method-name>timeout</method-name>-->
-<!--                    <method-params>-->
-<!--                        <method-param>javax.ejb.Timer</method-param>-->
-<!--                    </method-params>-->
-<!--                </timeout-method>-->
-<!--            </timer>-->
-<!--            <init-on-startup>true</init-on-startup>-->
-<!--        </session>-->
     </enterprise-beans>
 </ejb-jar>
