@@ -6,10 +6,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
 @Path("/")
-public class PersonController {
+public class HelloController {
 
     @EJB
-    private TextBean helloBean;
+    private HelloBean helloBean;
 
     @GET
     @Path("/hello")
