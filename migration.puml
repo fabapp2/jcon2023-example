@@ -1,5 +1,5 @@
 @startuml
-skinparam handwritten true
+skinparam handwritten false
 skinparam class {
     backgroundColor white
     ArrowColor  grey
@@ -28,14 +28,14 @@ class HelloController <<@PATH>>  {
 
 HelloController -[#pink,dashed,thickness=10]-> HelloService
 
-class HelloService {
+class HelloService <<@Stateless>>{
     getText()
 }
 
-file "ejb-jar.xml" as "ejbJar {
+
+file "ejb-jar.xml" as ejbJar {
 
 }
-
 'HelloController --> HelloService
 
 @enduml

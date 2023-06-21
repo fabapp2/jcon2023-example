@@ -17,7 +17,7 @@ package com.acme.jee;
 
 import javax.ejb.Stateless;
 
-@Stateless
+@Stateless // @Service("gudeBean")
 public class HelloService {
     public String getText() {
         return "Gude!";

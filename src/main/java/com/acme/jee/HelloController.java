@@ -5,15 +5,16 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-@Path("/")
+@Path("/") //@RestController
 public class HelloController {
 
-    @EJB
+    @EJB // @Autowired
     private HelloService helloService;
 
     @GET
     @Path("/hello")
     @Produces("text/plain")
+    // GetMapping("/hello")
     public String sayHello() {
         return helloService.getText();
     }
