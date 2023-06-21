@@ -18,7 +18,7 @@ package com.acme.jee;
 import javax.ejb.Stateless;
 
 @Stateless
-public class HelloBean {
+public class HelloService {
     public String getText() {
         return "Gude!";
     }

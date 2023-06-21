@@ -6,8 +6,8 @@
          version="3.2">
     <enterprise-beans>
         <session>
-            <ejb-name>gudeBean</ejb-name>
-            <ejb-class>com.acme.jee.HelloBean</ejb-class>
+            <ejb-name>mvnci</ejb-name>
+            <ejb-class>com.acme.jee.HelloService</ejb-class>
             <session-type>Stateless</session-type>
         </session>
     </enterprise-beans>

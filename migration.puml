@@ -1,0 +1,41 @@
+@startuml
+skinparam handwritten true
+skinparam class {
+    backgroundColor white
+    ArrowColor  grey
+    LineColor black
+    GroupBorderColor DeepSkyBlue
+    ActorBorderColor black
+    ActorBAckgroundColor white
+    ParticipantBorderColor black
+    ParticipantBackgroundColor white
+    LifeLineBorderColor black
+    FrameBorderColor grey
+    FrameBackgroundColor white
+    FrameFontColor grey
+    BackgroundColor white
+    BorderColor black
+}
+skinparam stereotypeIBackgroundColor GreenYellow
+skinparam stereotypeCBackgroundColor Lime
+hide footbox
+
+
+class HelloController <<@PATH>>  {
+
+    @GET  sayHello()
+}
+
+HelloController -[#pink,dashed,thickness=10]-> HelloService
+
+class HelloService {
+    getText()
+}
+
+file "ejb-jar.xml" as "ejbJar {
+
+}
+
+'HelloController --> HelloService
+
+@enduml

@@ -9,12 +9,12 @@ import javax.ws.rs.Produces;
 public class HelloController {
 
     @EJB
-    private HelloBean helloBean;
+    private HelloService helloService;
 
     @GET
     @Path("/hello")
     @Produces("text/plain")
     public String sayHello() {
-        return helloBean.getText();
+        return helloService.getText();
     }
 }
