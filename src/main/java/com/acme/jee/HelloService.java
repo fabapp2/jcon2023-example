@@ -19,7 +19,7 @@ import javax.ejb.Stateless;
 
 @Stateless // @Service("gudeBean")
 public class HelloService {
-    public String getText() {
-        return "Gude!";
+    public String getText(String name) {
+        return "Gude " + name + " !";
     }
 }
