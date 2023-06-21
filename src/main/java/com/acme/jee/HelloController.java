@@ -19,7 +19,10 @@ public class HelloController {
     @Path("/hello")
     @Produces("text/plain")
     // @RequestMapping(value = "/hello", produces = "text/plain", method = RequestMethod.GET)
-    public String sayHello(@QueryParam("name") String name) {
+    public String sayHello(
+            @QueryParam("name") String name
+            // @RequestParam(required = false, value = "name") String name
+    ) {
         return helloService.getText(name);
     }
 }
