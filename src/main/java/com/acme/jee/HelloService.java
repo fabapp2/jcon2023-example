@@ -15,9 +15,9 @@
  */
 package com.acme.jee;
 
-import javax.ejb.Stateless;
+import org.springframework.stereotype.Service;
 
-@Stateless // @Service("gudeBean")
+@Service("gudeBean") // @Service("gudeBean")
 public class HelloService {
     public String getText(String name) {
         return "Gude " + name + " !";
