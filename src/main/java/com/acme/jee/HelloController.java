@@ -1,12 +1,14 @@
 package com.acme.jee;
 
-import javax.ejb.EJB;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Path("/")
+import javax.ejb.EJB;
+
+@RestController
+@RequestMapping(value = "/")
 //@RestController
 // @RequestMapping(value = "/")
 public class HelloController {
@@ -15,12 +17,10 @@ public class HelloController {
     // @Autowired
     private HelloService helloService;
 
-    @GET
-    @Path("/hello")
-    @Produces("text/plain")
+    @RequestMapping(value = "/hello", produces = "text/plain", method = RequestMethod.GET)
     // @RequestMapping(value = "/hello", produces = "text/plain", method = RequestMethod.GET)
     public String sayHello(
-            @QueryParam("name") String name
+            @RequestParam(required = false, value = "name") String name
             // @RequestParam(required = false, value = "name") String name
     ) {
         return helloService.getText(name);
